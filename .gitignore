@@ -1,0 +1,44 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# IDE
+.idea/
+.vscode/
+.cache/
+*.swp
+*.swo
+*~
+
+# Qt generated
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*.pro.user*
+
+# Compiled objects
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+!cmake/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Packaging
+_CPack_Packages/

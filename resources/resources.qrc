@@ -1,0 +1,13 @@
+<!--
+  SwiftSearch 资源文件
+  - /icons/app.png      应用图标（窗口图标、快捷方式等）
+  - /translations/      中文简体翻译文件 (swiftsearch_zh_CN.qm)
+-->
+<RCC>
+  <qresource prefix="/">
+    <file>icons/app.png</file>
+  </qresource>
+  <qresource prefix="/translations">
+    <file>translations/swiftsearch_zh_CN.qm</file>
+  </qresource>
+</RCC>

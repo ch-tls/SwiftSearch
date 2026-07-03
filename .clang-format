@@ -1,0 +1,64 @@
+# Google C++ Style Guide
+# https://google.github.io/styleguide/cppguide.html
+
+BasedOnStyle: Google
+
+# C++23 extensions
+Standard: c++23
+
+# Column limit (Google style: 80, but 100 is common for modern projects)
+ColumnLimit: 100
+
+# Indentation
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+
+# Braces
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  BeforeElse: false
+  BeforeWhile: false
+
+# Pointers and references
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# Include sorting
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<Q.*>'
+    Priority: 1
+    SortPriority: 1
+  - Regex: '^<.*\.h>'
+    Priority: 2
+    SortPriority: 2
+  - Regex: '^<.*>'
+    Priority: 3
+    SortPriority: 3
+  - Regex: '^".*"'
+    Priority: 4
+    SortPriority: 4
+
+# Spacing
+SpaceAfterCStyleCast: true
+SpacesBeforeTrailingComments: 2
+
+# Misc
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+
+# Qt macros
+MacroBlockBegin: "^Q_.*_BEGIN$"
+MacroBlockEnd: "^Q_.*_END$"

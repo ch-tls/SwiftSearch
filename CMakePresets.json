@@ -1,0 +1,94 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 16,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug-linux",
+      "displayName": "Debug (Linux GCC)",
+      "description": "Debug build with GCC on Linux",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug-linux",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTS": "ON",
+        "SWIFTSEARCH_WERROR": "ON"
+      }
+    },
+    {
+      "name": "release-linux",
+      "displayName": "Release (Linux GCC)",
+      "description": "Release build with GCC on Linux",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-linux",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_TESTS": "ON",
+        "SWIFTSEARCH_WERROR": "OFF"
+      }
+    },
+    {
+      "name": "debug-windows",
+      "displayName": "Debug (Windows MSVC)",
+      "description": "Debug build with MSVC on Windows",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/debug-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTS": "ON",
+        "SWIFTSEARCH_WERROR": "ON"
+      }
+    },
+    {
+      "name": "release-windows",
+      "displayName": "Release (Windows MSVC)",
+      "description": "Release build with MSVC on Windows",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/release-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_TESTS": "ON",
+        "SWIFTSEARCH_WERROR": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-linux",
+      "configurePreset": "debug-linux",
+      "jobs": 0
+    },
+    {
+      "name": "release-linux",
+      "configurePreset": "release-linux",
+      "jobs": 0
+    },
+    {
+      "name": "debug-windows",
+      "configurePreset": "debug-windows"
+    },
+    {
+      "name": "release-windows",
+      "configurePreset": "release-windows"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "debug-linux",
+      "configurePreset": "debug-linux",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "debug-windows",
+      "configurePreset": "debug-windows",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
